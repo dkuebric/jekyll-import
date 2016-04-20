@@ -135,10 +135,11 @@ module JekyllImport
           # Get the relevant fields as a hash, delete empty fields and convert
           # to YAML for the header
           data = {
-            'layout' => 'post',
+            'layout' => 'page',
             'title' => post_title.strip.force_encoding("UTF-8"),
             'menu_title' => menu_title.strip.force_encoding("UTF-8"),
             'author' => author,
+            'navigation' => { 'show' => true },
             'nid' => nid,
             'mlid' => mlid,
             'plid' => plid,
